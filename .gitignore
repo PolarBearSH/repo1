@@ -1,0 +1,6 @@
+.gitignore
+sevagir.py
+caterpillar.py
+pythonik.ipynb
+.venv
+_pycache_
