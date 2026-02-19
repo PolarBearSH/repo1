@@ -15,9 +15,6 @@
 #    օրինակ՝ 15 -> XV,
 #            72 -> LXXII,
 #            9 -> IX:
-# Input: s = "MCMXCIV"
-# Output: 1994  MCMXCVI
-# Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 def roman_to_integer(n):
     s=''
     d = {
