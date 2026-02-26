@@ -7,7 +7,7 @@ class PinError(Exception):
     pass
 class CardError(Exception):
     pass
-# apres, keep your heads up!=, lav u
+
 
 class BankUser:
     count=0
@@ -26,7 +26,7 @@ class BankUser:
             raise AgeError("Age CANNOT be below 18")
         return True
 
-    # banan@_gmail.com a@_gmail.com
+    
     @staticmethod  
     def validate_gmail(gm):
         if not gm:
@@ -44,9 +44,6 @@ class BankUser:
 
     @staticmethod  
     def validate_card_number(num):
-        # 4318 2900 1148 8752
-        # 8328 4900 2188 16 7 10 2
-        # 8+3+2+8 + 4 +9 + 2+ 1 +8+8 +7+7+1+2=70%10=0 
         def luhn(n):
             n=str(n)
             summa=0
@@ -211,6 +208,7 @@ print(user.card_data())
 print(user.restore())
 print(user.deposit())
 print(user.card_data())
+
 
 
 
