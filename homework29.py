@@ -43,8 +43,10 @@ class MyShows:
         for i in range(a):
             if i==a-1:
                 ans+=self.__cast[i].title()
+                self.__cast[i]=self.__cast[i].title()
             else:
                 ans+=self.__cast[i].title()+", "
+                self.__cast[i]=self.__cast[i].title()
         return ans
     @property
     def seria(self):
@@ -109,4 +111,5 @@ del m.rate
 # m.rate=9
 print(m.rate)
 print(m)
+
 
