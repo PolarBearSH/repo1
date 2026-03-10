@@ -24,18 +24,16 @@ class Deck:
             new.append(a)
             self.l.remove(a)
         return new 
-
+  
     def shuffle(self):
         random.shuffle(self.l)
 
 class Player:
     def __init__(self,summa):
         self.summa=summa
-
     def __str__(self):
         return f"Your balance: {self.summa}"
     def winner(self,count1,count2,p):
-
         if self.count(count1)>21:
             self.summa-=p
             print("Bust! You lost.")
@@ -70,7 +68,7 @@ class Player:
         return count
     def play(self):
         p = int(input("How much are you betting on: $"))
-        if p>self.summa:
+        if p>self.summa or p<=0:
             return "Not enough funds"
         for i in range(4):
             print("\rDealing"+i*".",end=" ",flush=True)
@@ -92,7 +90,7 @@ class Player:
                 break
             choice = input("Hit or stand (h/s): \n")
 
-            if choice=="h":
+            if choice.lower()=="h":
                 k+=deck.deal(1)
                 score_k = self.count(k)
                 print(f"You: {k}  {score_k} points")
@@ -106,7 +104,7 @@ class Player:
                     time.sleep(0.5)
                     print(f"Dealer: {['X'] + m[1:]}  {self.count(m[1:])} points")
                     
-            elif choice=='s':
+            elif choice.lower()=='s':
                 while self.count(m) < 17: 
                     m+= deck.deal(1)
                 time.sleep(0.5)
@@ -117,10 +115,10 @@ class Player:
 
         return "\nEnd"
 
-
 pl = Player(2500)
 print(pl.play())
 print(pl.summa)
+
 
 
 
