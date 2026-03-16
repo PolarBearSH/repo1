@@ -1,2 +1,3 @@
-## small assignment
-This is first of many assignments
+## Python Projects
+Here you can see my personal mini-projects!
+Gradually evolving into more complexity
