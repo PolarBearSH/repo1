@@ -1,3 +1,5 @@
+#basic telegram bot, which responds to input buttons, sends pictures and messages
+
 import telebot
 import os 
 from dotenv import load_dotenv
